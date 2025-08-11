@@ -59,11 +59,11 @@ export default function Page() {
         altText={work.company}
         title={work.company}
         subtitle={work.title}
-        // href={work.href}
-        // badges={work.badges}
+        href={work.href || undefined}
+        badges={work.badges || undefined}
         period={`${work.start} - ${work.end ?? "Present"}`}
         description={work.description}
-        linkedinPosts={work.linkedinPosts}
+        linkedinPosts={work.linkedinPosts || undefined}
       />
     ))}
   </div>
@@ -132,15 +132,15 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
               >
                 <ProjectCard
-                  href={project.href}
+                  href={project.href || undefined}
                   key={project.title}
                   title={project.title}
                   description={project.description}
                   dates={project.dates}
                   tags={project.technologies}
                   image={project.image}
-                  video={project.video}
-                  links={project.links}
+                  video={project.video || undefined}
+                  links={project.links || undefined}
                 />
               </BlurFade>
             ))}
@@ -182,7 +182,7 @@ export default function Page() {
                     location={project.location}
                     dates={project.dates}
                     image={project.image}
-                    links={project.links}
+                    links={project.links || undefined}
                   />
                 </BlurFade>
               ))}
