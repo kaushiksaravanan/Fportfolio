@@ -83,7 +83,7 @@ export default function Page() {
                 logoUrl={education.logoUrl}
                 altText={education.school}
                 title={education.school}
-                subtitle={education.degree}
+                subtitle={education.degree + " Grade: "+ education.grade}
                 period={`${education.start} - ${education.end}`}
               />
             </BlurFade>
