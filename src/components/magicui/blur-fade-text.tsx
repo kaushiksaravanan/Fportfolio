@@ -47,7 +47,7 @@ const BlurFadeText = ({
               transition={{
   repeat: Infinity,        // number of times to repeat, or Infinity
   repeatType: "reverse",   // "loop" | "reverse" | "mirror"
-  delay: delay + i * characterDelay,
+  delay: delay + characterDelay,
   ease: "easeOut",
 }}
 
@@ -73,7 +73,7 @@ const BlurFadeText = ({
           transition={{
   repeat: Infinity,        // number of times to repeat, or Infinity
   repeatType: "reverse",   // "loop" | "reverse" | "mirror"
-  delay: delay + i * characterDelay,
+  delay: delay + characterDelay,
   ease: "easeOut",
 }}
 
