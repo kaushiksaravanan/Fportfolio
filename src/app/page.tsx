@@ -59,7 +59,6 @@ export default function Page() {
         altText={work.company}
         title={work.company}
         subtitle={work.title}
-        href={work.href}
         // badges={work.badges}
         period={`${work.start} - ${work.end ?? "Present"}`}
         description={work.description}
@@ -81,7 +80,6 @@ export default function Page() {
             >
               <ResumeCard
                 key={education.school}
-                href={education.href}
                 logoUrl={education.logoUrl}
                 altText={education.school}
                 title={education.school}
@@ -139,8 +137,7 @@ export default function Page() {
                   dates={project.dates}
                   tags={project.technologies}
                   image={project.image}
-                  video={project.video}
-                  links={project.links}
+                  
                 />
               </BlurFade>
             ))}
@@ -182,7 +179,7 @@ export default function Page() {
                     location={project.location}
                     dates={project.dates}
                     image={project.image}
-                    links={project.links}
+     
                   />
                 </BlurFade>
               ))}

@@ -19,7 +19,7 @@ interface ResumeCardProps {
   badges?: readonly string[];
   period: string;
   description?: string;
-  linkedinPosts?: { title: string; url: string }[];
+  linkedinPosts?: readonly { title: string; url: string }[];
 }
 
 export const ResumeCard = ({

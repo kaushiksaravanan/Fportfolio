@@ -101,7 +101,12 @@ export const DATA = {
       start: "Jan 2024",
       end: "Jul 2024",
       description:
-        "Developed a FastAPI service aggregating metrics from GCP, Azure, and OpenStack, reducing API calls by 40% and improving retrieval time from 15s to 2s."
+        "Developed a FastAPI service aggregating metrics from GCP, Azure, and OpenStack, reducing API calls by 40% and improving retrieval time from 15s to 2s.",
+        linkedinPosts: [
+        {
+          title: "Still learning. Still shipping.",
+          url: "https://www.linkedin.com/posts/activity-7353099451999162369-gDwx?utm_source=share&utm_medium=member_desktop&rcm=ACoAADYgcTQB3p7eTm2gAqn1Ue9YE6GrPtBEsvg"
+        },]
     },
     {
       company: "SAP Labs India",
@@ -111,7 +116,12 @@ export const DATA = {
       start: "May 2023",
       end: "Jun 2023",
       description:
-        "Conducted smoke, regression, and A/B testing on SAP Fiori UI, identifying over 172 defects across accessibility and functionality."
+        "Conducted smoke, regression, and A/B testing on SAP Fiori UI, identifying over 172 defects across accessibility and functionality.",
+        linkedinPosts: [
+        {
+          title: "Still learning. Still shipping.",
+          url: "https://www.linkedin.com/posts/activity-7353099451999162369-gDwx?utm_source=share&utm_medium=member_desktop&rcm=ACoAADYgcTQB3p7eTm2gAqn1Ue9YE6GrPtBEsvg"
+        },]
     },
     {
       company: "Samsung R&D Institute India",
@@ -121,7 +131,12 @@ export const DATA = {
       start: "Jan 2023",
       end: "Sep 2023",
       description:
-        "Developed a scalable PyQt5 GUI tool for injecting 14+ types of noise into images and videos for dataset augmentation, reducing processing time by up to 60%. Awarded the Excellence Performance Award."
+        "Developed a scalable PyQt5 GUI tool for injecting 14+ types of noise into images and videos for dataset augmentation, reducing processing time by up to 60%. Awarded the Excellence Performance Award.",
+        linkedinPosts: [
+        {
+          title: "Still learning. Still shipping.",
+          url: "https://www.linkedin.com/posts/activity-7353099451999162369-gDwx?utm_source=share&utm_medium=member_desktop&rcm=ACoAADYgcTQB3p7eTm2gAqn1Ue9YE6GrPtBEsvg"
+        },]
     },
   ],
 
@@ -164,6 +179,7 @@ export const DATA = {
       technologies: ["Python", "PyQt5", "OpenCV", "NumPy"],
       // video: "https://www.youtube.com/watch?v=6JQuTVdgvY4",
       image: "/multimedia-noise.png",
+      href:"https://github.com/kaushiksaravanan/Multimedia-Augmentation-using-Noise-GUI"
     },
     {
       title: "PSG Tech FineArts Android App",
