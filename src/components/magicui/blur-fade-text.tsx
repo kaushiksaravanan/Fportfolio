@@ -45,10 +45,12 @@ const BlurFadeText = ({
               exit="hidden"
               variants={combinedVariants}
               transition={{
-                yoyo: Infinity,
-                delay: delay + i * characterDelay,
-                ease: "easeOut",
-              }}
+  repeat: Infinity,        // number of times to repeat, or Infinity
+  repeatType: "reverse",   // "loop" | "reverse" | "mirror"
+  delay: delay + i * characterDelay,
+  ease: "easeOut",
+}}
+
               className={cn("inline-block", className)}
               style={{ width: char.trim() === "" ? "0.2em" : "auto" }}
             >
@@ -69,10 +71,12 @@ const BlurFadeText = ({
           exit="hidden"
           variants={combinedVariants}
           transition={{
-            yoyo: Infinity,
-            delay,
-            ease: "easeOut",
-          }}
+  repeat: Infinity,        // number of times to repeat, or Infinity
+  repeatType: "reverse",   // "loop" | "reverse" | "mirror"
+  delay: delay + i * characterDelay,
+  ease: "easeOut",
+}}
+
           className={cn("inline-block", className)}
         >
           {text}
