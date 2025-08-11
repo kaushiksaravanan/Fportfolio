@@ -78,7 +78,6 @@ export const DATA = {
   work: [
     {
       company: "SAP Labs India",
-      // href: "https://sap.com",
       location: "Bengaluru, India",
       title: "Associate Developer",
       logoUrl: "/sap.png",
@@ -96,7 +95,6 @@ export const DATA = {
     },
     {
       company: "SAP Labs India",
-      // href: "https://sap.com",
       location: "Bengaluru, India",
       title: "Software Engineer Intern",
       logoUrl: "/sap.png",
@@ -107,7 +105,6 @@ export const DATA = {
     },
     {
       company: "SAP Labs India",
-      // href: "https://sap.com",
       location: "Bengaluru, India",
       title: "Software Engineer Intern",
       logoUrl: "/sap.png",
@@ -118,7 +115,6 @@ export const DATA = {
     },
     {
       company: "Samsung R&D Institute India",
-      // href: "https://research.samsung.com",
       location: "Remote",
       title: "PRISM Project Intern",
       logoUrl: "/samsung.png",
@@ -132,7 +128,6 @@ export const DATA = {
   education: [
     {
       school: "PSG College of Technology",
-      // href: "https://psgtech.edu",
       degree: "B.Tech in Information Technology",
       grade: "CGPA: 9.54",
       logoUrl: "/psg.png",
