@@ -7,7 +7,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { motion } from "framer-motion";
 import { ExternalLinkIcon } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 
 interface ResumeCardProps {
   logoUrl: string;
@@ -75,7 +74,7 @@ export const ResumeCard = ({
           )}
         </CardHeader>
 
-        {/* Always Expanded Description with Lighter Font */}
+        {/* Auto-Expanded Description with Lighter Font */}
         {description && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -133,6 +132,6 @@ export const ResumeCard = ({
       {CardContent}
     </Link>
   ) : (
-    <div>{CardContent}</div>
+    <div className="cursor-default">{CardContent}</div>
   );
 };
