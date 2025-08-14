@@ -188,7 +188,7 @@ export const DATA = {
       description:
         "Created an Android app with Firebase integration, role-based access control, and real-time Firestore sync to manage Fine Arts Club events.",
       technologies: ["Java", "Android", "Firebase", "Firestore"],
-      image: "/finearts-app.png",
+      image: "/finearts-app.gif",
     },
     {
       title: "DFS and BFS Visualizer",
