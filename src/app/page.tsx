@@ -32,16 +32,17 @@ export default function Page() {
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                <AvatarImage alt={`${DATA.name} - Professional headshot`} src={DATA.avatarUrl} />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
             </BlurFade>
           </div>
         </div>
       </section>
+      <h1 className="sr-only">{DATA.name} - Software Engineer & AI Enthusiast Portfolio</h1>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About</h2>
+          <h2 className="text-xl font-bold">About Me</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
