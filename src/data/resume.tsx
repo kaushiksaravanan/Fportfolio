@@ -12,6 +12,7 @@ export const DATA = {
   summary:
     "Software engineer and IEEE-published researcher specializing in AI, cloud computing, and scalable software solutions. Experienced in delivering impactful projects across AI-driven chatbots, cloud cost optimization, multimedia indexing, and real-time data processing. Proven track record in hackathons, academic excellence, and community leadership. Curse of High Achiever.",
   avatarUrl: "/kaushik.png",
+  resumeUrl: "https://drive.google.com/file/d/1kPvuawGaUpUhNq05BZNGkFXLiDZMnw4A/view?usp=sharing",
   skills: [
     "Python", "Go", "Java", "C", "JavaScript", "TypeScript", "SQL",
     "FastAPI", "Flask", "TensorFlow", "PyTorch", "LangChain", "OpenCV", "MediaPipe",
@@ -22,6 +23,16 @@ export const DATA = {
     "Git", "Kubernetes", "Selenium",
     "Android Development", "React", "Next.js", "TailwindCSS"
   ],
+  codingProfiles: {
+    leetcode: {
+      username: "kaushiksaravanan",
+      url: "https://leetcode.com/u/kaushiksaravanan/"
+    },
+    codeforces: {
+      username: "s-kaushik-s",
+      url: "https://codeforces.com/profile/s-kaushik-s"
+    }
+  },
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
@@ -72,6 +83,12 @@ export const DATA = {
         icon: Icons.x,
         navbar: true,
       },
+      Resume: {
+        name: "Resume",
+        url: "https://drive.google.com/file/d/1kPvuawGaUpUhNq05BZNGkFXLiDZMnw4A/view?usp=sharing",
+        icon: Icons.resume,
+        navbar: true,
+      },
     },
   },
 
@@ -84,7 +101,7 @@ export const DATA = {
       start: "Jul 2024",
       end: "Present",
       description:
-        "Built real-time cross-cloud observability dashboard (React + Node + Python); implemented a Python-based event mesh collector for cross-cloud telemetry ingestion. Rewrote password-fetch client for 9,000+ Linux servers from Python to dependency-free Golang (std lib only), eliminating insecure 3rd-party library and enabling secure patching at scale. Owned privacy-first, GDPR-compliant RAG pipeline: Detected PII via Presidio + fine-tuned BERT on 300k+ records pre-ChromaDB indexing; added recovery mechanisms for ingestion over 5K+ docs. Scaled to 400 users from 25 users in 2 months. Demoed in SAP Development Kickoff Meeting (DKOM). Slashed RAG chatbot query latency from 180s to 2s (90x speedup) using batching, delta loads, SQL caching, and DB WAL optimizations. Engineered CI/CD pipeline reducing chatbot downtime 15 minutes per deployment and saved 6 hours/month; integrated LangChain + PostgreSQL for scalable indexing. Led multi-cloud consolidation (GCP, Azure, OpenStack) via Jenkins (20 steps, 200+ logs/step), dismantling 550+ instances. Handeled 2.2M logging events and 0% reported data loss.",
+        "• Built real-time cross-cloud observability dashboard (React + Node + Python)\n• Implemented Python-based event mesh collector for cross-cloud telemetry ingestion\n• Rewrote password-fetch client for 9,000+ Linux servers from Python to dependency-free Golang (std lib only), eliminating insecure 3rd-party library and enabling secure patching at scale\n• Owned privacy-first, GDPR-compliant RAG pipeline: Detected PII via Presidio + fine-tuned BERT on 300k+ records pre-ChromaDB indexing\n• Added recovery mechanisms for ingestion over 5K+ docs. Scaled to 400 users from 25 users in 2 months\n• Demoed in SAP Development Kickoff Meeting (DKOM)\n• Slashed RAG chatbot query latency from 180s to 2s (90x speedup) using batching, delta loads, SQL caching, and DB WAL optimizations\n• Engineered CI/CD pipeline reducing chatbot downtime 15 minutes per deployment and saved 6 hours/month\n• Integrated LangChain + PostgreSQL for scalable indexing\n• Led multi-cloud consolidation (GCP, Azure, OpenStack) via Jenkins (20 steps, 200+ logs/step), dismantling 550+ instances\n• Handled 2.2M logging events and 0% reported data loss",
 
       linkedinPosts: [
         {
@@ -107,7 +124,7 @@ export const DATA = {
       start: "Jan 2024",
       end: "Jul 2024",
       description:
-        "Built FastAPI service aggregating metrics from GCP, Azure, and OpenStack, cut retrieval time 76 min to 13 min (5.8×) and API calls 40% via multiprocessing, LRU cache, batching, and compression. Designed scalable architecture for cross-cloud telemetry; solved cold-start and burst-load issues using connection pooling, file caching and async processing.",
+        "• Built FastAPI service aggregating metrics from GCP, Azure, and OpenStack\n• Cut retrieval time from 76 min to 13 min (5.8×) and reduced API calls by 40%\n• Implemented multiprocessing, LRU cache, batching, and compression for optimization\n• Designed scalable architecture for cross-cloud telemetry\n• Solved cold-start and burst-load issues using connection pooling, file caching and async processing",
         linkedinPosts: [
         {
           title: "Still learning. Still shipping.",
@@ -122,7 +139,7 @@ export const DATA = {
       start: "May 2023",
       end: "Jun 2023",
       description:
-        "Created an automatic error-parsing pipeline that extracted Odata from SAP System and sent alert emails. Designed and executed comprehensive smoke, regression, and A/B testing on SAP Fiori UI components, identifying and triaging 172+ accessibility and functionality defects.",
+        "• Created automatic error-parsing pipeline that extracted Odata from SAP System and sent alert emails\n• Designed and executed comprehensive smoke, regression, and A/B testing on SAP Fiori UI components\n• Identified and triaged 172+ accessibility and functionality defects",
         linkedinPosts: [
         {
           title: "Still learning. Still shipping.",
@@ -137,7 +154,7 @@ export const DATA = {
       start: "Jan 2023",
       end: "Sep 2023",
       description:
-        " Developed an scalable algorithm for asynchronous noise injection into images and videos.  Recognized with an Excellent Performance Award and awarded a 90,000 INR cash prize for outstanding contributions.",
+        "• Developed scalable algorithm for asynchronous noise injection into images and videos\n• Recognized with an Excellent Performance Award\n• Awarded 90,000 INR cash prize for outstanding contributions",
         linkedinPosts: [
         {
           title: "Still learning. Still shipping.",
@@ -241,7 +258,7 @@ export const DATA = {
       location: "India",
       description:
         "Developed and deployed a GPU-accelerated multimedia file indexing system for MP Police. Solution indexes 1,000+ files in under 2 seconds using TF-IDF and NLP techniques.",
-      image: "/images/hackathons/sih-2022.png",
+      image: "/multimedia-indexer.gif",
     },
     {
       title: "GE Precision Care Challenge – Top 12 Finalist",
@@ -249,7 +266,7 @@ export const DATA = {
       location: "India",
       description:
         "Built a multilingual PII/PHI redaction system with DeBERTa, QLoRA, spaCy, and Presidio for healthcare data privacy.",
-      image: "/images/hackathons/ge-challenge.png",
+      image: "/sentinelpii.png",
     },
   ],
 

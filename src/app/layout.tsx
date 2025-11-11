@@ -125,11 +125,6 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
-    profile: {
-      firstName: DATA.name.split(" ")[0],
-      lastName: DATA.name.split(" ")[1] || "",
-      username: DATA.name.toLowerCase().replace(" ", ""),
-    },
   },
   twitter: {
     card: "summary_large_image",
