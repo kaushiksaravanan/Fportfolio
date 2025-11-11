@@ -73,10 +73,14 @@ export const NavigationSidebar = () => {
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="fixed left-6 top-1/2 z-50 hidden lg:block"
-      style={{ transform: "translateY(-50%)" }}
+      className="fixed z-50 hidden lg:block xl:block"
+      style={{ 
+        left: "5%",
+        top: "50%",
+        transform: "translateY(-50%)"
+      }}
     >
-      <nav className="flex flex-col space-y-1 rounded-xl border bg-background/95 backdrop-blur-sm p-3 shadow-xl">
+      <nav className="flex flex-col space-y-1 rounded-xl border bg-background/95 backdrop-blur-sm p-3 shadow-xl min-w-max">
         {navigationItems.map((item) => {
           const Icon = item.icon;
           const isActive = activeSection === item.id;
@@ -97,7 +101,7 @@ export const NavigationSidebar = () => {
               title={item.label}
             >
               <Icon className="h-4 w-4 flex-shrink-0" />
-              <span className="hidden xl:inline-block whitespace-nowrap font-medium">
+              <span className="hidden xl:inline-block whitespace-nowrap font-medium min-w-max">
                 {item.label}
               </span>
             </motion.button>
