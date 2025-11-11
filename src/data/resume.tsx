@@ -107,8 +107,7 @@ export const DATA = {
       start: "Jan 2024",
       end: "Jul 2024",
       description:
-        "Built FastAPI service aggregating metrics from GCP, Azure, and OpenStack, cut retrieval time 76 min to 13 min (5.8×) and API calls 40% via multiprocessing, LRU cache, batching, and compression. Designed scalable architecture for cross-cloud telemetry; solved cold-start and burst-load issues using connection pooling, file caching and
- async processing.",
+        "Built FastAPI service aggregating metrics from GCP, Azure, and OpenStack, cut retrieval time 76 min to 13 min (5.8×) and API calls 40% via multiprocessing, LRU cache, batching, and compression. Designed scalable architecture for cross-cloud telemetry; solved cold-start and burst-load issues using connection pooling, file caching and async processing.",
         linkedinPosts: [
         {
           title: "Still learning. Still shipping.",
