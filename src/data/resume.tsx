@@ -84,13 +84,19 @@ export const DATA = {
       start: "Jul 2024",
       end: "Present",
       description:
-        "Automated consolidation of 350+ servers across GCP, Azure, and OpenStack using Python, Bash, and Perl integrated into Jenkins CI/CD, achieving annual savings of $88K. Developed a privacy-focused RAG chatbot querying 5,000+ Confluence pages and ServiceNow tickets, implementing PII handling via Presidio and fine-tuned BERT, reducing retrieval time from 180s to 2s.",
+        "Built real-time cross-cloud observability dashboard (React + Node + Python); implemented a Python-based event mesh collector for cross-cloud telemetry ingestion. Rewrote password-fetch client for 9,000+ Linux servers from Python to dependency-free Golang (std lib only), eliminating insecure 3rd-party library and enabling secure patching at scale. Owned privacy-first, GDPR-compliant RAG pipeline: Detected PII via Presidio + fine-tuned BERT on 300k+ records pre-ChromaDB indexing; added recovery mechanisms for ingestion over 5K+ docs. Scaled to 400 users from 25 users in 2 months. Demoed in SAP Development Kickoff Meeting (DKOM). Slashed RAG chatbot query latency from 180s to 2s (90x speedup) using batching, delta loads, SQL caching, and DB WAL optimizations. Engineered CI/CD pipeline reducing chatbot downtime 15 minutes per deployment and saved 6 hours/month; integrated LangChain + PostgreSQL for scalable indexing. Led multi-cloud consolidation (GCP, Azure, OpenStack) via Jenkins (20 steps, 200+ logs/step), dismantling 550+ instances. Handeled 2.2M logging events and 0% reported data loss.",
 
       linkedinPosts: [
         {
           title: "Still learning. Still shipping.",
           url: "https://www.linkedin.com/posts/activity-7353099451999162369-gDwx?utm_source=share&utm_medium=member_desktop&rcm=ACoAADYgcTQB3p7eTm2gAqn1Ue9YE6GrPtBEsvg"
-        },]
+        },
+        {
+          title:"SAP Development Kickoff Meeting (DKOM) Demopod - RAG-Privacy Chatbot",
+          url: "https://www.linkedin.com/posts/activity-7304514591273664513-P2lx?utm_source=share&utm_medium=member_desktop&rcm=ACoAADYgcTQB3p7eTm2gAqn1Ue9YE6GrPtBEsvg"
+        }
+      
+      ]
 
     },
     {
@@ -101,7 +107,8 @@ export const DATA = {
       start: "Jan 2024",
       end: "Jul 2024",
       description:
-        "Developed a FastAPI service aggregating metrics from GCP, Azure, and OpenStack, reducing API calls by 40% and improving retrieval time from 15s to 2s.",
+        "Built FastAPI service aggregating metrics from GCP, Azure, and OpenStack, cut retrieval time 76 min to 13 min (5.8×) and API calls 40% via multiprocessing, LRU cache, batching, and compression. Designed scalable architecture for cross-cloud telemetry; solved cold-start and burst-load issues using connection pooling, file caching and
+ async processing.",
         linkedinPosts: [
         {
           title: "Still learning. Still shipping.",
@@ -116,7 +123,7 @@ export const DATA = {
       start: "May 2023",
       end: "Jun 2023",
       description:
-        "Conducted smoke, regression, and A/B testing on SAP Fiori UI, identifying over 172 defects across accessibility and functionality.",
+        "Created an automatic error-parsing pipeline that extracted Odata from SAP System and sent alert emails. Designed and executed comprehensive smoke, regression, and A/B testing on SAP Fiori UI components, identifying and triaging 172+ accessibility and functionality defects.",
         linkedinPosts: [
         {
           title: "Still learning. Still shipping.",
@@ -131,7 +138,7 @@ export const DATA = {
       start: "Jan 2023",
       end: "Sep 2023",
       description:
-        "Developed a scalable PyQt5 GUI tool for injecting 14+ types of noise into images and videos for dataset augmentation, reducing processing time by up to 60%. Awarded the Excellence Performance Award.",
+        " Developed an scalable algorithm for asynchronous noise injection into images and videos.  Recognized with an Excellent Performance Award and awarded a 90,000 INR cash prize for outstanding contributions.",
         linkedinPosts: [
         {
           title: "Still learning. Still shipping.",
@@ -305,12 +312,5 @@ export const DATA = {
     "Coursera – Data Science Math Skills",
     "Dataquest.io – Data Visualization Fundamentals",
     "HackerRank – Problem Solving Basics",
-  ],
-
-  funfacts: [
-    "Won national-level hackathons while balancing full-time studies.",
-    "Can switch from Python to Go to Java in a single coding session.",
-    "Built apps for everything from police departments to fine arts clubs.",
-    "Occasionally replaces sleep with coding marathons."
   ],
 } as const;
