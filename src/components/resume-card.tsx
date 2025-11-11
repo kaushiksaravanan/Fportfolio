@@ -15,6 +15,7 @@ interface ResumeCardProps {
   title: string;
   subtitle?: string;
   href?: string;
+  website?: string; // For school/college website links
   badges?: readonly string[];
   period: string;
   description?: string;
@@ -27,6 +28,7 @@ export const ResumeCard = ({
   title,
   subtitle,
   href,
+  website,
   badges,
   period,
   description,
@@ -53,7 +55,18 @@ export const ResumeCard = ({
         <CardHeader>
           <div className="flex items-center justify-between gap-x-2 text-base">
             <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
-              {title}
+              {website ? (
+                <a
+                  href={website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+                >
+                  {title}
+                </a>
+              ) : (
+                title
+              )}
               {badges && (
                 <span className="inline-flex gap-x-1 ml-2">
                   {badges.map((badge, index) => (
@@ -88,45 +101,60 @@ export const ResumeCard = ({
             }}
             className="mt-2 text-xs sm:text-sm font-light"
           >
-            {description}
+            <div className="space-y-1">
+              {description.split('\n').map((line, index) => (
+                <div key={index} className="flex items-start">
+                  {line.trim().startsWith('•') ? (
+                    <div className="flex items-start">
+                      <span className="text-muted-foreground mr-2 mt-0.5">•</span>
+                      <span className="flex-1">{line.trim().substring(1).trim()}</span>
+                    </div>
+                  ) : (
+                    line.trim() && <span>{line}</span>
+                  )}
+                </div>
+              ))}
+            </div>
 
-            {/* LinkedIn Posts Button */}
-            {linkedinPosts.length > 0 && (
-              <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-                <DialogTrigger asChild>
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                    }}
-                    className="mt-3 inline-flex items-center text-blue-500 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-sm"
-                  >
-                    View LinkedIn Posts
-                    <ExternalLinkIcon className="ml-1 h-4 w-4" />
-                  </button>
-                </DialogTrigger>
-                <DialogContent className="max-w-md">
-                  <DialogHeader>
-                    <DialogTitle>
-                      LinkedIn Posts at {title}
-                    </DialogTitle>
-                  </DialogHeader>
-                  <div className="space-y-2 max-h-60 overflow-y-auto">
-                    {linkedinPosts.map((post) => (
-                      <a
-                        key={post.url}
-                        href={post.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block text-blue-500 hover:underline break-words"
-                      >
-                        {post.title}
-                      </a>
-                    ))}
-                  </div>
-                </DialogContent>
-              </Dialog>
+            {/* LinkedIn Posts Button with spacing */}
+            {linkedinPosts && linkedinPosts.length > 0 && (
+              <div className="mt-4">
+                <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+                  <DialogTrigger asChild>
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                      }}
+                      className="inline-flex items-center text-blue-500 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-sm"
+                    >
+                      View LinkedIn Posts
+                      <ExternalLinkIcon className="ml-1 h-4 w-4" />
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md">
+                    <DialogHeader>
+                      <DialogTitle>
+                        LinkedIn Posts at {title}
+                      </DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-2 max-h-60 overflow-y-auto">
+                      {linkedinPosts.map((post) => (
+                        <a
+                          key={post.url}
+                          href={post.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block text-blue-500 hover:underline break-words"
+                        >
+                          {post.title}
+                        </a>
+                      ))}
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
             )}
           </motion.div>
         )}

@@ -171,6 +171,7 @@ export const DATA = {
       logoUrl: "/psg.png",
       start: "2020",
       end: "2024",
+      website: "https://psgtech.edu",
     },
   ],
 
@@ -315,6 +316,16 @@ export const DATA = {
       date: "Oct 2024",
       conference: "ICPECTS 2024",
       publisher: "IEEE",
+    },
+  ],
+
+  blogs: [
+    {
+      title: "🎧 I Reverse-Engineered ChatGPT's Voice Data Flow and Found My Own Voice Hidden in a ZIP File",
+      href: "/blog/Zips_and_Files",
+      publishedAt: "2025-08-11",
+      summary: "How I went from missing transcript frustration to finding my actual ChatGPT voice recordings through reverse engineering, DevTools, Burp Suite, and… a simple ZIP file.",
+      readTime: "8 min read",
     },
   ],
 

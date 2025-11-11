@@ -1,6 +1,8 @@
 import { HackathonCard } from "@/components/hackathon-card";
 import { CodingStatsCard } from "@/components/coding-stats-card";
 import { ResumeDownloadButton } from "@/components/resume-download-button";
+import { NavigationSidebar } from "@/components/navigation-sidebar";
+import { BlogCard } from "@/components/blog-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
@@ -24,7 +26,9 @@ export default async function Page() {
     codingStats = STATIC_CODING_STATS;
   }
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
+    <>
+      <NavigationSidebar />
+      <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
@@ -107,6 +111,7 @@ export default async function Page() {
                 title={education.school}
                 subtitle={education.degree + " Grade: "+ education.grade}
                 period={`${education.start} - ${education.end}`}
+                website={education.website}
               />
             </BlurFade>
           ))}
@@ -176,9 +181,46 @@ export default async function Page() {
           </div>
         </div>
       </section>
+      <section id="blogs">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 15}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Blogs
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Latest Writings
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Thoughts, experiences, and discoveries from my journey in technology.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 15.5}>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-1 max-w-2xl mx-auto">
+              {DATA.blogs.map((blog, id) => (
+                <BlurFade
+                  key={blog.href}
+                  delay={BLUR_FADE_DELAY * 16 + id * 0.05}
+                >
+                  <BlogCard
+                    title={blog.title}
+                    href={blog.href}
+                    publishedAt={blog.publishedAt}
+                    summary={blog.summary}
+                    readTime={blog.readTime}
+                  />
+                </BlurFade>
+              ))}
+            </div>
+          </BlurFade>
+        </div>
+      </section>
       <section id="hackathons">
         <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 16}>
+          <BlurFade delay={BLUR_FADE_DELAY * 17}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
@@ -198,12 +240,12 @@ export default async function Page() {
               </div>
             </div>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 17}>
+          <BlurFade delay={BLUR_FADE_DELAY * 18}>
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
               {DATA.hackathons.map((project, id) => (
                 <BlurFade
                   key={project.title + project.dates}
-                  delay={BLUR_FADE_DELAY * 18 + id * 0.05}
+                  delay={BLUR_FADE_DELAY * 19 + id * 0.05}
                 >
                   <HackathonCard
                     title={project.title}
@@ -221,7 +263,7 @@ export default async function Page() {
       </section>
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 19}>
+          <BlurFade delay={BLUR_FADE_DELAY * 20}>
             <div className="space-y-3">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                 Contact
@@ -244,5 +286,6 @@ export default async function Page() {
         </div>
       </section>
     </main>
+    </>
   );
 }
