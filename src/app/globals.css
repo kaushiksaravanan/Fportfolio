@@ -142,3 +142,25 @@ code[data-line-numbers-max-digits="2"] > [data-line]::before {
 code[data-line-numbers-max-digits="3"] > [data-line]::before {
   width: 3rem;
 }
+
+/* Prevent dialog layout issues */
+[data-radix-popper-content-wrapper] {
+  z-index: 50 !important;
+  position: fixed !important;
+}
+
+/* Ensure dialog overlay doesn't break layout */
+[data-radix-dialog-overlay] {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 50 !important;
+}
+
+/* Ensure dialog content is properly positioned */
+[data-radix-dialog-content] {
+  position: fixed !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 50 !important;
+}

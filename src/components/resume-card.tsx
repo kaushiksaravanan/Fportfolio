@@ -95,27 +95,31 @@ export const ResumeCard = ({
               <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                 <DialogTrigger asChild>
                   <button
-                    onClick={(e) => e.stopPropagation()}
-                    className="mt-3 inline-flex items-center text-blue-500 hover:underline"
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                    }}
+                    className="mt-3 inline-flex items-center text-blue-500 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-sm"
                   >
                     View LinkedIn Posts
                     <ExternalLinkIcon className="ml-1 h-4 w-4" />
                   </button>
                 </DialogTrigger>
-                <DialogContent>
+                <DialogContent className="max-w-md">
                   <DialogHeader>
                     <DialogTitle>
                       LinkedIn Posts at {title}
                     </DialogTitle>
                   </DialogHeader>
-                  <div className="space-y-2">
+                  <div className="space-y-2 max-h-60 overflow-y-auto">
                     {linkedinPosts.map((post) => (
                       <a
                         key={post.url}
                         href={post.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block text-blue-500 hover:underline"
+                        className="block text-blue-500 hover:underline break-words"
                       >
                         {post.title}
                       </a>
@@ -132,11 +136,6 @@ export const ResumeCard = ({
 
   return (
     <>
-      <style>{`
-        body[data-scroll-locked] {
-          --removed-body-scroll-bar-size: 0px !important;
-        }
-      `}</style>
       {href ? (
         <Link href={href} className="block cursor-pointer">
           {CardContent}
