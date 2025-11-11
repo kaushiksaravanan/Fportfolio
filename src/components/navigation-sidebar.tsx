@@ -73,10 +73,10 @@ export const NavigationSidebar = () => {
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="fixed left-4 top-1/2 z-50 hidden lg:block"
+      className="fixed left-6 top-1/2 z-50 hidden lg:block"
       style={{ transform: "translateY(-50%)" }}
     >
-      <nav className="flex flex-col space-y-2 rounded-lg border bg-background/80 backdrop-blur-sm p-2 shadow-lg">
+      <nav className="flex flex-col space-y-1 rounded-xl border bg-background/95 backdrop-blur-sm p-3 shadow-xl">
         {navigationItems.map((item) => {
           const Icon = item.icon;
           const isActive = activeSection === item.id;
@@ -88,16 +88,16 @@ export const NavigationSidebar = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={cn(
-                "flex items-center space-x-2 rounded-md p-2 text-sm transition-colors",
-                "hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring",
+                "flex items-center justify-start space-x-3 rounded-lg px-3 py-2.5 text-sm transition-all duration-200",
+                "hover:bg-muted/80 focus:outline-none focus:ring-2 focus:ring-ring",
                 isActive 
-                  ? "bg-primary text-primary-foreground" 
+                  ? "bg-primary text-primary-foreground shadow-sm" 
                   : "text-muted-foreground hover:text-foreground"
               )}
               title={item.label}
             >
               <Icon className="h-4 w-4 flex-shrink-0" />
-              <span className="hidden xl:inline-block whitespace-nowrap">
+              <span className="hidden xl:inline-block whitespace-nowrap font-medium">
                 {item.label}
               </span>
             </motion.button>

@@ -126,30 +126,33 @@ export const ResumeCard = ({
                       onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
+                        setIsDialogOpen(true);
                       }}
-                      className="inline-flex items-center text-blue-500 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-sm"
+                      className="inline-flex items-center text-blue-500 hover:text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-sm transition-colors duration-200"
                     >
-                      View LinkedIn Posts
+                      View LinkedIn Posts ({linkedinPosts.length})
                       <ExternalLinkIcon className="ml-1 h-4 w-4" />
                     </button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-md">
+                  <DialogContent className="max-w-lg">
                     <DialogHeader>
-                      <DialogTitle>
-                        LinkedIn Posts at {title}
+                      <DialogTitle className="text-lg font-semibold">
+                        LinkedIn Posts from {title}
                       </DialogTitle>
                     </DialogHeader>
-                    <div className="space-y-2 max-h-60 overflow-y-auto">
-                      {linkedinPosts.map((post) => (
-                        <a
-                          key={post.url}
-                          href={post.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block text-blue-500 hover:underline break-words"
-                        >
-                          {post.title}
-                        </a>
+                    <div className="space-y-3 max-h-80 overflow-y-auto pr-2">
+                      {linkedinPosts.map((post, index) => (
+                        <div key={post.url} className="border-l-2 border-blue-200 pl-4 py-2">
+                          <a
+                            href={post.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-blue-600 hover:text-blue-800 hover:underline break-words transition-colors duration-200"
+                          >
+                            <span className="text-sm font-medium">Post #{index + 1}</span>
+                            <p className="mt-1">{post.title}</p>
+                          </a>
+                        </div>
                       ))}
                     </div>
                   </DialogContent>
