@@ -70,43 +70,43 @@ export const NavigationSidebar = () => {
 
   return (
     <motion.aside
-      initial={{ opacity: 0, x: -50 }}
+      initial={{ opacity: 0, x: -32 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-      className="fixed z-50 hidden lg:block xl:block"
-      style={{ 
-        left: "5%",
-        top: "50%",
-        transform: "translateY(-50%)"
-      }}
+      transition={{ duration: 0.35, ease: [0.25, 0.8, 0.25, 1] }}
+      className="fixed inset-y-0 left-4 z-50 hidden lg:flex"
+      aria-label="Site section navigation"
+      role="complementary"
     >
-      <nav className="flex flex-col space-y-1 rounded-xl border bg-background/95 backdrop-blur-sm p-3 shadow-xl min-w-max">
-        {navigationItems.map((item) => {
-          const Icon = item.icon;
-          const isActive = activeSection === item.id;
-          
-          return (
-            <motion.button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className={cn(
-                "flex items-center justify-start space-x-3 rounded-lg px-3 py-2.5 text-sm transition-all duration-200",
-                "hover:bg-muted/80 focus:outline-none focus:ring-2 focus:ring-ring",
-                isActive 
-                  ? "bg-primary text-primary-foreground shadow-sm" 
-                  : "text-muted-foreground hover:text-foreground"
-              )}
-              title={item.label}
-            >
-              <Icon className="h-4 w-4 flex-shrink-0" />
-              <span className="hidden xl:inline-block whitespace-nowrap font-medium min-w-max">
-                {item.label}
-              </span>
-            </motion.button>
-          );
-        })}
+      <nav
+        role="navigation"
+        aria-label="Primary"
+        className="my-auto flex flex-col space-y-1 rounded-xl border bg-background/95 backdrop-blur-sm p-3 shadow-xl w-48"
+      >
+        <ul className="flex flex-col space-y-1" role="list">
+          {navigationItems.map((item) => {
+            const Icon = item.icon;
+            const isActive = activeSection === item.id;
+            return (
+              <li key={item.id} className="w-full">
+                <motion.button
+                  onClick={() => scrollToSection(item.id)}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.96 }}
+                  className={cn(
+                    "group flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors", 
+                    "focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background", 
+                    isActive ? "bg-primary text-primary-foreground shadow-sm" : "text-muted-foreground hover:bg-muted/70 hover:text-foreground"
+                  )}
+                  aria-current={isActive ? 'page' : undefined}
+                  aria-label={item.label}
+                >
+                  <Icon aria-hidden="true" className="h-4 w-4 flex-shrink-0" />
+                  <span className="whitespace-nowrap">{item.label}</span>
+                </motion.button>
+              </li>
+            );
+          })}
+        </ul>
       </nav>
     </motion.aside>
   );
