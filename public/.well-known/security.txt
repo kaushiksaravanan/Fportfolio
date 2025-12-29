@@ -1,0 +1,6 @@
+# Security Policy for kaushiks.vercel.app
+# Learn more at https://securitytxt.org/
+
+Contact: mailto:kaushik.s.saravanan@gmail.com
+Preferred-Languages: en
+Canonical: https://kaushiks.vercel.app/.well-known/security.txt

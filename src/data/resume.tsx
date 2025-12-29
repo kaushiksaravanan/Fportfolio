@@ -8,9 +8,9 @@ export const DATA = {
   location: "Bengaluru, Karnataka, India",
   locationLink: "https://www.google.com/maps/place/Bengaluru",
   description:
-    "Software Engineer | AI & Cloud Computing Enthusiast | IEEE-Published Researcher | Hackathon Winner",
+    "Software Development Engineer (SDE) | AI & Cloud Computing Enthusiast | IEEE-Published Researcher | Hackathon Winner",
   summary:
-    "Software engineer and IEEE-published researcher specializing in AI, cloud computing, and scalable software solutions. Experienced in delivering impactful projects across AI-driven chatbots, cloud cost optimization, multimedia indexing, and real-time data processing. Proven track record in hackathons, academic excellence, and community leadership. Curse of High Achiever.",
+    "Software Development Engineer (SDE) and IEEE-published researcher specializing in AI, cloud computing, and scalable software solutions. Experienced in delivering impactful projects across AI-driven chatbots, cloud cost optimization, multimedia indexing, and real-time data processing. Proven track record in hackathons, academic excellence, and community leadership. Currently an SDE at SAP Labs India.",
   avatarUrl: "/kaushik.png",
   resumeUrl: "https://drive.google.com/file/d/1kPvuawGaUpUhNq05BZNGkFXLiDZMnw4A/view?usp=sharing",
   skills: [
@@ -109,10 +109,10 @@ export const DATA = {
           url: "https://www.linkedin.com/posts/activity-7353099451999162369-gDwx?utm_source=share&utm_medium=member_desktop&rcm=ACoAADYgcTQB3p7eTm2gAqn1Ue9YE6GrPtBEsvg"
         },
         {
-          title:"SAP Development Kickoff Meeting (DKOM) Demopod - RAG-Privacy Chatbot",
+          title: "SAP Development Kickoff Meeting (DKOM) Demopod - RAG-Privacy Chatbot",
           url: "https://www.linkedin.com/posts/activity-7304514591273664513-P2lx?utm_source=share&utm_medium=member_desktop&rcm=ACoAADYgcTQB3p7eTm2gAqn1Ue9YE6GrPtBEsvg"
         }
-      
+
       ]
 
     },
@@ -125,7 +125,7 @@ export const DATA = {
       end: "Jul 2024",
       description:
         "• Built FastAPI service aggregating metrics from GCP, Azure, and OpenStack\n• Cut retrieval time from 76 min to 13 min (5.8×) and reduced API calls by 40%\n• Implemented multiprocessing, LRU cache, batching, and compression for optimization\n• Designed scalable architecture for cross-cloud telemetry\n• Solved cold-start and burst-load issues using connection pooling, file caching and async processing",
-        linkedinPosts: [
+      linkedinPosts: [
         {
           title: "Still learning. Still shipping.",
           url: "https://www.linkedin.com/posts/activity-7353099451999162369-gDwx?utm_source=share&utm_medium=member_desktop&rcm=ACoAADYgcTQB3p7eTm2gAqn1Ue9YE6GrPtBEsvg"
@@ -140,7 +140,7 @@ export const DATA = {
       end: "Jun 2023",
       description:
         "• Created automatic error-parsing pipeline that extracted Odata from SAP System and sent alert emails\n• Designed and executed comprehensive smoke, regression, and A/B testing on SAP Fiori UI components\n• Identified and triaged 172+ accessibility and functionality defects",
-        linkedinPosts: [
+      linkedinPosts: [
         {
           title: "Still learning. Still shipping.",
           url: "https://www.linkedin.com/posts/activity-7353099451999162369-gDwx?utm_source=share&utm_medium=member_desktop&rcm=ACoAADYgcTQB3p7eTm2gAqn1Ue9YE6GrPtBEsvg"
@@ -155,7 +155,7 @@ export const DATA = {
       end: "Sep 2023",
       description:
         "• Developed scalable algorithm for asynchronous noise injection into images and videos\n• Recognized with an Excellent Performance Award\n• Awarded 90,000 INR cash prize for outstanding contributions",
-        linkedinPosts: [
+      linkedinPosts: [
         {
           title: "Still learning. Still shipping.",
           url: "https://www.linkedin.com/posts/activity-7353099451999162369-gDwx?utm_source=share&utm_medium=member_desktop&rcm=ACoAADYgcTQB3p7eTm2gAqn1Ue9YE6GrPtBEsvg"
@@ -203,7 +203,7 @@ export const DATA = {
       technologies: ["Python", "PyQt5", "OpenCV", "NumPy"],
       // video: "https://www.youtube.com/watch?v=6JQuTVdgvY4",
       image: "/multimedia-noise.png",
-      href:"https://github.com/kaushiksaravanan/Multimedia-Augmentation-using-Noise-GUI"
+      href: "https://github.com/kaushiksaravanan/Multimedia-Augmentation-using-Noise-GUI"
     },
     {
       title: "PSG Tech FineArts Android App",

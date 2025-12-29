@@ -28,7 +28,7 @@ export default async function Page() {
   return (
     <>
       <NavigationSidebar />
-      <main className="flex flex-col min-h-[100dvh] space-y-10 lg:ml-[15%] lg:mr-[5%]">
+      <main id="main-content" className="flex flex-col min-h-[100dvh] space-y-10 lg:ml-[15%] lg:mr-[5%]">
         <section id="hero">
           <div className="mx-auto w-full max-w-2xl space-y-8">
             <div className="gap-2 flex justify-between">
@@ -57,7 +57,7 @@ export default async function Page() {
             </div>
           </div>
         </section>
-        <h1 className="sr-only">{DATA.name} - Software Engineer & AI Enthusiast Portfolio</h1>
+        <h1 className="sr-only">Kaushik S - Software Development Engineer (SDE) | SAP Developer | AI Engineer | Full Stack Developer in Bengaluru, India</h1>
         <section id="about">
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <h2 className="text-xl font-bold">About Me</h2>

@@ -22,16 +22,16 @@ export function ResumeDownloadButton({ resumeUrl, className = "" }: ResumeDownlo
   const directUrl = getDirectDownloadUrl(resumeUrl);
 
   return (
-    <div className={`flex gap-2 ${className}`}>
+    <div className={`flex gap-2 ${className}`} role="group" aria-label="Resume actions">
       <Link href={resumeUrl} target="_blank" rel="noopener noreferrer">
         <Button variant="outline" size="sm" className="flex items-center gap-2">
-          <FileText className="h-4 w-4" />
+          <FileText className="h-4 w-4" aria-hidden="true" />
           View Resume
         </Button>
       </Link>
-      <Link href={directUrl} target="_blank" rel="noopener noreferrer">
+      <Link href={directUrl} target="_blank" rel="noopener noreferrer" download>
         <Button size="sm" className="flex items-center gap-2">
-          <Download className="h-4 w-4" />
+          <Download className="h-4 w-4" aria-hidden="true" />
           Download Resume
         </Button>
       </Link>

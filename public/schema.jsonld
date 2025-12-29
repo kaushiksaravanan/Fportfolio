@@ -1,0 +1,85 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Person",
+            "@id": "https://kaushiks.vercel.app/#person",
+            "name": "Kaushik S",
+            "alternateName": [
+                "Kaushik Saravanan",
+                "Kaushik SDE",
+                "Kaushik S SDE"
+            ],
+            "description": "Software Development Engineer (SDE) at SAP Labs India specializing in AI, Cloud Computing, and scalable solutions",
+            "url": "https://kaushiks.vercel.app",
+            "image": "https://kaushiks.vercel.app/kaushik.png",
+            "email": "kaushik.s.saravanan@gmail.com",
+            "jobTitle": "Software Development Engineer (SDE)",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "SAP Labs India",
+                "url": "https://www.sap.com"
+            },
+            "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "PSG College of Technology",
+                "url": "https://psgtech.edu"
+            },
+            "knowsAbout": [
+                "Software Development",
+                "Artificial Intelligence",
+                "Machine Learning",
+                "Cloud Computing",
+                "Python",
+                "Go",
+                "React",
+                "LangChain",
+                "RAG Pipelines",
+                "Backend Development"
+            ],
+            "sameAs": [
+                "https://github.com/Kaushiksaravanan",
+                "https://linkedin.com/in/kaushik-ss",
+                "https://x.com/Kaushiks0",
+                "https://leetcode.com/u/kaushiksaravanan",
+                "https://codeforces.com/profile/s-kaushik-s",
+                "https://ieeexplore.ieee.org/document/11033077",
+                "https://ieeexplore.ieee.org/document/10780078"
+            ],
+            "award": [
+                "Smart India Hackathon 2022 Winner",
+                "GE Precision Care Challenge Top 12 Finalist",
+                "Samsung PRISM Excellence Award",
+                "Best Outgoing Student - IT Department"
+            ],
+            "hasOccupation": {
+                "@type": "Occupation",
+                "name": "Software Development Engineer",
+                "occupationalCategory": "15-1252.00"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://kaushiks.vercel.app/#website",
+            "url": "https://kaushiks.vercel.app",
+            "name": "Kaushik S - SDE Portfolio",
+            "alternateName": [
+                "Kaushik SDE",
+                "Kaushik Software Engineer Portfolio"
+            ],
+            "description": "Portfolio of Kaushik S, a Software Development Engineer (SDE) at SAP Labs specializing in AI, Cloud Computing, and scalable solutions",
+            "publisher": {
+                "@id": "https://kaushiks.vercel.app/#person"
+            },
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "ProfilePage",
+            "name": "Kaushik S - Software Development Engineer",
+            "url": "https://kaushiks.vercel.app",
+            "mainEntity": {
+                "@id": "https://kaushiks.vercel.app/#person"
+            }
+        }
+    ]
+}

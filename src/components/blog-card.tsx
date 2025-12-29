@@ -19,15 +19,19 @@ export const BlogCard = ({
   readTime,
 }: BlogCardProps) => {
   return (
-    <Link href={href} className="block">
+    <Link
+      href={href}
+      className="block"
+      aria-label={`Read blog post: ${title}`}
+    >
       <Card className="group cursor-pointer hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
         <CardHeader className="pb-3">
-          <h3 className="text-lg font-semibold leading-tight group-hover:text-blue-600 transition-colors">
+          <h3 className="text-lg font-semibold leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
             {title}
           </h3>
           <div className="flex items-center gap-4 text-xs text-muted-foreground">
             <div className="flex items-center gap-1">
-              <CalendarIcon className="h-3 w-3" />
+              <CalendarIcon className="h-3 w-3" aria-hidden="true" />
               <time dateTime={publishedAt}>
                 {new Date(publishedAt).toLocaleDateString("en-US", {
                   year: "numeric",
@@ -37,7 +41,7 @@ export const BlogCard = ({
               </time>
             </div>
             <div className="flex items-center gap-1">
-              <ClockIcon className="h-3 w-3" />
+              <ClockIcon className="h-3 w-3" aria-hidden="true" />
               <span>{readTime}</span>
             </div>
           </div>

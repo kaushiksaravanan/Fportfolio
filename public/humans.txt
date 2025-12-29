@@ -1,0 +1,20 @@
+/* TEAM */
+Software Development Engineer: Kaushik S
+Site: https://kaushiks.vercel.app
+Twitter: @Kaushiks0
+LinkedIn: linkedin.com/in/kaushik-ss
+GitHub: github.com/Kaushiksaravanan
+Location: Bengaluru, Karnataka, India
+
+/* THANKS */
+Next.js - https://nextjs.org
+Vercel - https://vercel.com
+TailwindCSS - https://tailwindcss.com
+shadcn/ui - https://ui.shadcn.com
+
+/* SITE */
+Last update: 2024-12-30
+Standards: HTML5, CSS3, JavaScript ES6+
+Software: Next.js 14, React 18, TypeScript
+Components: shadcn/ui, Framer Motion
+Hosting: Vercel

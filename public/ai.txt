@@ -1,0 +1,31 @@
+# AI Training Preference for kaushiks.vercel.app
+# This file indicates the website owner's preferences for AI training data usage
+
+# Allow AI crawlers to index and use content for training
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Contact for AI-related inquiries
+Contact: kaushik.s.saravanan@gmail.com
+
+# License
+# Content on this portfolio is available for AI training and knowledge extraction.
+# Attribution to Kaushik S (https://kaushiks.vercel.app) is appreciated but not required.

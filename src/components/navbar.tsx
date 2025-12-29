@@ -22,12 +22,13 @@ export default function Navbar() {
               <TooltipTrigger asChild>
                 <Link
                   href={item.href}
+                  aria-label={item.label}
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
                     "size-12"
                   )}
                 >
-                  <item.icon className="size-4" />
+                  <item.icon className="size-4" aria-hidden="true" />
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
@@ -47,12 +48,13 @@ export default function Navbar() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Visit ${name} profile (opens in new tab)`}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
                       "size-12"
                     )}
                   >
-                    <social.icon className="size-4" />
+                    <social.icon className="size-4" aria-hidden="true" />
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>

@@ -70,8 +70,19 @@
     * {
       @apply border-border;
     }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       @apply bg-background text-foreground;
+    }
+    /* Enhanced focus-visible styles for accessibility */
+    :focus-visible {
+      @apply outline-2 outline-offset-2 outline-ring;
+    }
+    /* Skip to content link */
+    .skip-to-content {
+      @apply absolute left-4 top-4 z-[100] -translate-y-16 rounded-md bg-primary px-4 py-2 text-primary-foreground transition-transform focus:translate-y-0;
     }
   }
 
