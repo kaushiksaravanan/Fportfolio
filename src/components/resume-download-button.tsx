@@ -29,7 +29,7 @@ export function ResumeDownloadButton({ resumeUrl, className = "" }: ResumeDownlo
           View Resume
         </Button>
       </Link>
-      <Link href={directUrl}>
+      <Link href={directUrl} target="_blank" rel="noopener noreferrer">
         <Button size="sm" className="flex items-center gap-2">
           <Download className="h-4 w-4" />
           Download Resume

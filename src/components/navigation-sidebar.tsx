@@ -9,7 +9,8 @@ import {
   GraduationCapIcon, 
   CodeIcon, 
   TrophyIcon, 
-  BarChart3Icon,
+  FolderOpenIcon,
+  ActivityIcon,
   BookOpenIcon,
   MailIcon 
 } from "lucide-react";
@@ -27,9 +28,10 @@ const navigationItems: NavigationItem[] = [
   { id: "work", label: "Experience", icon: BriefcaseIcon },
   { id: "education", label: "Education", icon: GraduationCapIcon },
   { id: "skills", label: "Skills", icon: CodeIcon },
-  { id: "projects", label: "Projects", icon: BarChart3Icon },
-  { id: "hackathons", label: "Hackathons", icon: TrophyIcon },
+  { id: "coding-stats", label: "Coding Stats", icon: ActivityIcon },
+  { id: "projects", label: "Projects", icon: FolderOpenIcon },
   { id: "blogs", label: "Blogs", icon: BookOpenIcon },
+  { id: "hackathons", label: "Hackathons", icon: TrophyIcon },
   { id: "contact", label: "Contact", icon: MailIcon },
 ];
 
