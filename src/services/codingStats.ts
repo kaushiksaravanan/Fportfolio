@@ -28,7 +28,7 @@ export interface CodingStats {
 async function fetchLeetCodeStats(username: string) {
   try {
     // unstable_noStore(); // Commented out to allow static generation
-    
+
     // Fetch both profile and contest data
     const [profileResponse, contestResponse] = await Promise.all([
       fetch(`https://alfa-leetcode-api.onrender.com/userProfile/${username}`, {
@@ -38,14 +38,14 @@ async function fetchLeetCodeStats(username: string) {
         next: { revalidate: 3600 } // Cache for 1 hour
       })
     ]);
-    
+
     if (!profileResponse.ok) {
       throw new Error('Failed to fetch LeetCode profile stats');
     }
-    
+
     const profileData = await profileResponse.json();
     let contestRating = 1500; // Default rating
-    
+
     // Try to get contest rating, but don't fail if it's not available
     if (contestResponse.ok) {
       try {
@@ -55,7 +55,7 @@ async function fetchLeetCodeStats(username: string) {
         console.log('Contest data not available, using default rating');
       }
     }
-    
+
     return {
       username: profileData.username || username,
       totalSolved: profileData.totalSolved || 0,
@@ -71,12 +71,12 @@ async function fetchLeetCodeStats(username: string) {
     // Return fallback data
     return {
       username: username,
-      totalSolved: 899,
-      easySolved: 432,
-      mediumSolved: 393,
-      hardSolved: 74,
-      ranking: 35759,
-      rating: 1587,
+      totalSolved: 937,
+      easySolved: 450,
+      mediumSolved: 409,
+      hardSolved: 78,
+      ranking: 32784,
+      rating: 1771,
     };
   }
 }
@@ -85,29 +85,29 @@ async function fetchLeetCodeStats(username: string) {
 async function fetchCodeforcesStats(username: string) {
   try {
     // unstable_noStore(); // Commented out to allow static generation
-    
+
     // Using Codeforces API
     const userInfoResponse = await fetch(`https://codeforces.com/api/user.info?handles=${username}`, {
       next: { revalidate: 3600 } // Cache for 1 hour
     });
-    
+
     if (!userInfoResponse.ok) {
       throw new Error('Failed to fetch Codeforces user info');
     }
-    
+
     const userInfoData = await userInfoResponse.json();
-    
+
     if (userInfoData.status !== 'OK' || !userInfoData.result || userInfoData.result.length === 0) {
       throw new Error('Invalid Codeforces response');
     }
-    
+
     const userInfo = userInfoData.result[0];
-    
+
     // Fetch user status for problems solved count
     const userStatusResponse = await fetch(`https://codeforces.com/api/user.status?handle=${username}&from=1&count=10000`, {
       next: { revalidate: 3600 }
     });
-    
+
     let problemsSolved = 0;
     if (userStatusResponse.ok) {
       const userStatusData = await userStatusResponse.json();
@@ -122,7 +122,7 @@ async function fetchCodeforcesStats(username: string) {
         problemsSolved = solvedProblems.size;
       }
     }
-    
+
     return {
       username: userInfo.handle || username,
       rating: userInfo.rating || 0,
@@ -156,7 +156,7 @@ export async function getCodingStats(): Promise<CodingStats> {
     fetchLeetCodeStats('kaushiksaravanan'),
     fetchCodeforcesStats('s-kaushik-s')
   ]);
-  
+
   return {
     leetcode: leetcodeStats,
     codeforces: codeforcesStats
@@ -167,12 +167,12 @@ export async function getCodingStats(): Promise<CodingStats> {
 export const STATIC_CODING_STATS: CodingStats = {
   leetcode: {
     username: 'kaushiksaravanan',
-    totalSolved: 899,
-    easySolved: 432,
-    mediumSolved: 393,
-    hardSolved: 74,
-    ranking: 35759,
-    rating: 1587,
+    totalSolved: 937,
+    easySolved: 450,
+    mediumSolved: 409,
+    hardSolved: 78,
+    ranking: 32784,
+    rating: 1771,
   },
   codeforces: {
     username: 's-kaushik-s',
